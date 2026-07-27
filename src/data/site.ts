@@ -50,6 +50,14 @@ export const nav = [
 
 export const services = [
   {
+    slug: 'shopify',
+    title: 'Shopify',
+    href: '/cosa-facciamo/siti-web-e-ecommerce/',
+    icon: '/icons/shopify.svg',
+    summary:
+      'Setup, tema, app e ottimizzazione di store Shopify: dal lancio del negozio alla crescita di conversioni e catalogo.',
+  },
+  {
     slug: 'ecommerce',
     title: 'eCommerce',
     href: '/cosa-facciamo/siti-web-e-ecommerce/',
@@ -100,14 +108,12 @@ export const services = [
 ] as const;
 
 export const technologies = [
-  'WordPress',
-  'WooCommerce',
-  'PrestaShop',
-  'Google Ads',
-  'Meta Ads',
-  'iOS',
-  'Android',
-  'PHP',
-  'MySQL',
-  'Linux',
+  { name: 'Shopify', logo: '/icons/shopify.svg' },
+  { name: 'WordPress', logo: '/icons/wordpress.svg' },
+  { name: 'WooCommerce', logo: '/icons/woocommerce.svg' },
+  { name: 'PrestaShop', logo: '/icons/prestashop.svg' },
+  { name: 'Google Ads', logo: '/icons/google-ads.svg' },
+  { name: 'Meta Ads', logo: '/icons/meta.svg' },
+  { name: 'iOS', logo: '/icons/apple.svg' },
+  { name: 'Android', logo: '/icons/android.svg' },
 ] as const;

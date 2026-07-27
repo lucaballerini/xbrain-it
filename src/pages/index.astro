@@ -84,7 +84,14 @@ const faqSchema = {
 
   <div class="tech-marquee" aria-label="Piattaforme e tecnologie utilizzate">
     <div class="tech-track">
-      {[...technologies, ...technologies].map((tech) => <span>{tech}</span>)}
+      {
+        [...technologies, ...technologies].map((tech) => (
+          <span class="tech-logo">
+            <img src={tech.logo} alt="" width="28" height="28" loading="lazy" decoding="async" />
+            {tech.name}
+          </span>
+        ))
+      }
     </div>
   </div>
 
@@ -108,7 +115,7 @@ const faqSchema = {
       <aside class="contact-card">
         <h3 style="font-size:1.2rem">Risposte rapide</h3>
         <p><strong>Dove operate?</strong><br />Civitanova Marche e tutta Italia, anche da remoto.</p>
-        <p><strong>Lavorate su WordPress ed ecommerce?</strong><br />Sì: WordPress, WooCommerce, PrestaShop e soluzioni custom.</p>
+        <p><strong>Lavorate su WordPress ed ecommerce?</strong><br />Sì: Shopify, WordPress, WooCommerce, PrestaShop e soluzioni custom.</p>
         <p><strong>Gestite anche le ads?</strong><br />Sì: Google Ads, Meta Ads e piani social coordinati.</p>
       </aside>
     </div>
