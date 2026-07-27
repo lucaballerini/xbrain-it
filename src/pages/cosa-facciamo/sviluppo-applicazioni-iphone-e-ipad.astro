@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sviluppo applicazioni iPhone, iPad e Android',
+  provider: { '@type': 'Organization', name: 'XBRAIN srl' },
+  areaServed: 'IT',
+  description:
+    'Sviluppo app mobile per iOS e Android orientato a idea, usabilità e fruibilità, per marketing e servizi aziendali.',
+};
+---
+
+<BaseLayout
+  title="Sviluppo applicazioni iPhone e iPad"
+  description="Sviluppo app per iPhone, iPad e Android: concept, usabilità e realizzazione per marketing, fidelizzazione e servizi aziendali."
+  path="/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/"
+  jsonLd={serviceSchema}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Servizi</p>
+      <h1>Sviluppo applicazioni iPhone, iPad e Android</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="container content-prose">
+      <p class="lead">
+        La diffusione di smartphone e tablet ha aperto un mercato a cui le aziende non possono restare indifferenti.
+      </p>
+      <p>
+        Essere sull’iPhone di milioni di persone è un’opportunità concreta: azione di marketing, servizio aggiuntivo,
+        fidelizzazione o acquisizione di nuovi clienti. Un’app ben progettata rafforza il brand e il business.
+      </p>
+      <p>
+        Realizzare un’app non è solo programmazione: servono idea, usabilità e fruibilità. Gli utenti premiano
+        applicazioni con concept innovativo, semplice e intuitivo.
+      </p>
+      <p>
+        L’iPad è oggi uno strumento di lavoro quotidiano: progettiamo applicazioni che lo rendono ancora più utile nei
+        processi aziendali.
+      </p>
+      <ul class="list-check">
+        <li>App iOS e Android</li>
+        <li>Consulenza sulla soluzione più efficiente per tempi e costi</li>
+        <li>Focus su UX, performance e obiettivi di business</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

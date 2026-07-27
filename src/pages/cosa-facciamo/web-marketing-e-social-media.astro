@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Web marketing e social media',
+  provider: { '@type': 'Organization', name: 'XBRAIN srl' },
+  areaServed: 'IT',
+  description:
+    'SEO, Google Ads, SEM/PPC e social media marketing per aumentare la visibilità di siti ed ecommerce.',
+};
+---
+
+<BaseLayout
+  title="Web marketing e social media"
+  description="SEO, Google Ads, SEM e social media marketing per siti ed ecommerce. Strategie digitali su misura con XBRAIN srl."
+  path="/cosa-facciamo/web-marketing-e-social-media/"
+  jsonLd={serviceSchema}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Servizi</p>
+      <h1>Web marketing e social media</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="container content-prose">
+      <p class="lead">
+        Realizzare un sito o un ecommerce non basta: servono interventi mirati per aumentare la visibilità, soprattutto
+        nei motori di ricerca e sui social.
+      </p>
+      <p>
+        Non esiste una strategia unica per tutti. Costruiamo piani su misura che combinano SEO, advertising e presenza
+        social in base agli obiettivi di business.
+      </p>
+
+      <h2>SEO</h2>
+      <p>
+        Ottimizziamo il sito per i motori di ricerca, valorizzando i contenuti e migliorando l’indicizzazione sui
+        termini correlati al tuo business.
+      </p>
+
+      <h2>SEM e PPC</h2>
+      <p>
+        Con campagne Google Ads, Meta Ads e simili aumentiamo la visibilità con risultati immediati. Più costose della
+        SEO nel medio-lungo periodo, ma ideali quando serve traffico qualificabile in tempi rapidi.
+      </p>
+
+      <h2>Social media marketing</h2>
+      <p>
+        Lavoriamo su Facebook, Instagram, LinkedIn, YouTube, Pinterest e altri network per comunicare, interagire e
+        trasmettere contenuti in modo diretto. Il metodo tipico include:
+      </p>
+      <ul class="list-check">
+        <li>Scelta dei canali più adatti al business</li>
+        <li>Creazione profili allineati all’immagine aziendale</li>
+        <li>Connessione tra profili social, sito e comunità online</li>
+        <li>Piano editoriale e di marketing sugli obiettivi definiti</li>
+        <li>Monitoraggio conversazioni e consulenza per internalizzare le competenze</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

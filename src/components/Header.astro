@@ -1,0 +1,54 @@
+---
+import { nav, site } from '../data/site';
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label={`${site.name} — Home`}>
+      <img src="/images/logo.png" alt={site.name} width="200" height="48" decoding="async" />
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      Menu
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Navigazione sito" data-nav>
+      {
+        nav.map((item) =>
+          'children' in item && item.children ? (
+            <details class="nav-dropdown">
+              <summary>{item.label}</summary>
+              <div class="nav-dropdown-panel">
+                <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
+                  Panoramica
+                </a>
+                {item.children.map((child) => (
+                  <a href={child.href} aria-current={pathname === child.href ? 'page' : undefined}>
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </details>
+          ) : (
+            <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ),
+        )
+      }
+      <a class="btn btn-primary" href="/contatti/" style="margin-left:0.4rem">Richiedi preventivo gratuito</a>
+    </nav>
+
+    <a class="btn btn-primary header-cta" href="/contatti/">Richiedi preventivo gratuito</a>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const navEl = document.querySelector('[data-nav]');
+  toggle?.addEventListener('click', () => {
+    const open = navEl?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>

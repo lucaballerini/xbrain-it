@@ -1,0 +1,62 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/images/logo-white.png" alt={site.name} width="180" height="43" loading="lazy" decoding="async" />
+      <p>
+        {site.name} realizza ecommerce, siti web, app mobile e campagne di web marketing a Civitanova Marche e in tutta Italia.
+      </p>
+      <div class="socials">
+        <a href={site.social.facebook} rel="noopener noreferrer" target="_blank">Facebook</a>
+        <a href={site.social.instagram} rel="noopener noreferrer" target="_blank">Instagram</a>
+        <a href={site.social.linkedin} rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div>
+      <h2>Naviga</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/chi-siamo/">Chi siamo</a></li>
+        <li><a href="/contatti/">Contatti</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Servizi</h2>
+      <ul>
+        <li><a href="/cosa-facciamo/siti-web-e-ecommerce/">Ecommerce e siti web</a></li>
+        <li><a href="/cosa-facciamo/web-marketing-e-social-media/">Web marketing e Social Ads</a></li>
+        <li><a href="/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/">App iOS e Android</a></li>
+        <li><a href="/cosa-facciamo/consulenza-e-assistenza-it/">Consulenza e assistenza IT</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Contattaci</h2>
+      <ul>
+        <li>{site.address.street}<br />{site.address.city} ({site.address.region})</li>
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        <li><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></li>
+        <li><a href={`tel:${site.mobile}`}>{site.mobileDisplay}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© {year} {site.legalName}. Tutti i diritti riservati.</span>
+    <span>
+      <a href="/informativa-privacy/">Informativa privacy</a>
+      ·
+      <a href="/cookie-policy/">Cookie policy</a>
+      ·
+      <button type="button" data-open-cookie-settings style="background:none;border:0;color:inherit;cursor:pointer;padding:0;font:inherit;text-decoration:underline">
+        Preferenze cookie
+      </button>
+    </span>
+  </div>
+</footer>

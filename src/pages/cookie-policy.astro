@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Cookie policy"
+  description="Cookie policy di XBRAIN srl: tipi di cookie utilizzati, finalità, gestione del consenso GDPR e Google Tag Manager."
+  path="/cookie-policy/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">GDPR</p>
+      <h1>Cookie policy</h1>
+      <p class="lead">Ultimo aggiornamento: 27 luglio 2026</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem">
+    <div class="container content-prose">
+      <p>
+        Il sito {site.url} utilizza cookie e tecnologie simili. I cookie tecnici sono necessari al funzionamento; i
+        cookie analytics e marketing vengono installati solo dopo il tuo consenso esplicito tramite il banner.
+      </p>
+
+      <h2>Cosa sono i cookie</h2>
+      <p>
+        I cookie sono piccoli file di testo memorizzati sul dispositivo. Tecnologie analoghe (local storage, pixel)
+        possono raccogliere informazioni su preferenze e utilizzo del servizio.
+      </p>
+
+      <h2>Categorie utilizzate</h2>
+      <ul class="list-check">
+        <li><strong>Necessari</strong> — preferenze di consenso, sicurezza, bilanciamento del carico. Sempre attivi.</li>
+        <li>
+          <strong>Analytics</strong> — misurazione del traffico tramite Google Tag Manager ({site.gtmId}) / Google
+          Analytics. Attivi solo con consenso.
+        </li>
+        <li>
+          <strong>Marketing</strong> — eventuali campagne e remarketing veicolate via GTM. Attivi solo con consenso.
+        </li>
+      </ul>
+
+      <h2>Come gestire il consenso</h2>
+      <p>
+        Alla prima visita puoi accettare, rifiutare i non necessari o personalizzare le categorie. Puoi modificare la
+        scelta in qualsiasi momento dal footer (“Preferenze cookie”). Il sito utilizza Google Consent Mode v2: finché
+        non dai consenso, gli storage analytics/ads restano negati.
+      </p>
+
+      <h2>Google Analytics / Tag Manager</h2>
+      <p>
+        Per informazioni sulle modalità di trattamento di Google:
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">
+          policies.google.com/privacy
+        </a>
+        . Opt-out browser Analytics:
+        <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener noreferrer" target="_blank">
+          tools.google.com/dlpage/gaoptout
+        </a>
+        .
+      </p>
+
+      <h2>Come disabilitare i cookie dal browser</h2>
+      <ul class="list-check">
+        <li>
+          <a href="https://support.google.com/chrome/answer/95647?hl=it" rel="noopener noreferrer" target="_blank"
+            >Chrome</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://support.mozilla.org/it/kb/Gestione%20dei%20cookie"
+            rel="noopener noreferrer"
+            target="_blank">Firefox</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+            rel="noopener noreferrer"
+            target="_blank">Edge</a
+          >
+        </li>
+        <li>
+          <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" rel="noopener noreferrer" target="_blank"
+            >Safari</a
+          >
+        </li>
+      </ul>
+
+      <p>
+        Per il trattamento dei dati personali vedi anche l’
+        <a href="/informativa-privacy/">Informativa privacy</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

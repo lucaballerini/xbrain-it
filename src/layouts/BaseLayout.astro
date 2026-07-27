@@ -1,0 +1,74 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import Seo from '../components/Seo.astro';
+import { site } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, path = Astro.url.pathname, jsonLd } = Astro.props;
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+  name: site.legalName,
+  url: site.url,
+  logo: `${site.url}/images/logo.png`,
+  image: `${site.url}/images/logo.png`,
+  email: site.email,
+  telephone: site.phoneDisplay,
+  description:
+    'Agenzia digitale a Civitanova Marche: siti web, ecommerce, web marketing, social media, app mobile e consulenza IT.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.address.street,
+    addressLocality: site.address.city,
+    addressRegion: site.address.region,
+    postalCode: site.address.postalCode,
+    addressCountry: site.address.country,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: site.geo.latitude,
+    longitude: site.geo.longitude,
+  },
+  sameAs: [site.social.facebook, site.social.instagram, site.social.linkedin],
+  areaServed: ['IT', 'Marche', 'Civitanova Marche'],
+  priceRange: '$$',
+};
+
+const allJsonLd = jsonLd
+  ? Array.isArray(jsonLd)
+    ? [orgSchema, ...jsonLd]
+    : [orgSchema, jsonLd]
+  : [orgSchema];
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <Seo title={title} description={description} path={path} jsonLd={allJsonLd} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <Header />
+    <main id="contenuto">
+      <slot />
+    </main>
+    <Footer />
+    <CookieConsent />
+  </body>
+</html>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contatti XBRAIN srl',
+  url: `${site.url}/contatti/`,
+};
+---
+
+<BaseLayout
+  title="Contatti"
+  description="Contatta XBRAIN srl a Civitanova Marche per informazioni, preventivi o un incontro. Tel 0733 772292 — info@xbrain.it"
+  path="/contatti/"
+  jsonLd={contactSchema}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contatti</p>
+      <h1>Contattaci senza impegno</h1>
+      <p class="lead">
+        Per informazioni, un contatto commerciale, un preventivo o un incontro conoscitivo compila il form: ti
+        ricontattiamo in breve tempo.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem">
+    <div class="container split-2">
+      <form class="form" method="POST" action={`https://formsubmit.co/${site.email}`}>
+        <input type="hidden" name="_subject" value="Richiesta contatto dal sito xbrain.it" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value={`${site.url}/contatti/?inviato=1`} />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <label>
+          Nome e cognome *
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          Email *
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          Telefono
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+        <label>
+          Messaggio *
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <label class="form-consent">
+          <input type="checkbox" name="privacy" value="1" required />
+          <span>
+            Ho preso visione dell’
+            <a href="/informativa-privacy/">informativa sul trattamento dei dati personali</a> e presto il consenso per
+            essere ricontattato in merito alla richiesta.
+          </span>
+        </label>
+        <button class="btn btn-primary" type="submit">Invia richiesta</button>
+        {
+          Astro.url.searchParams.get('inviato') === '1' && (
+            <p role="status" style="color:var(--xb-blue);font-weight:700;margin:0">
+              Grazie: la tua richiesta è stata inviata.
+            </p>
+          )
+        }
+      </form>
+
+      <aside class="contact-card">
+        <h2 style="font-size:1.25rem">XBRAIN srl</h2>
+        <p>
+          {site.address.street}<br />
+          {site.address.city} — {site.address.region}
+        </p>
+        <p>
+          <strong>Chiamaci</strong><br />
+          <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a><br />
+          <a href={`tel:${site.mobile}`}>{site.mobileDisplay}</a>
+        </p>
+        <p>
+          <strong>Email</strong><br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

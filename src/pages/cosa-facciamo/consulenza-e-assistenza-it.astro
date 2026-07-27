@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Consulenza e assistenza IT',
+  provider: { '@type': 'Organization', name: 'XBRAIN srl' },
+  areaServed: 'IT',
+  description:
+    'Consulenza IT, infrastrutture, networking e assistenza su Linux, Windows e Apple per aziende.',
+};
+---
+
+<BaseLayout
+  title="Consulenza e assistenza IT"
+  description="Consulenza IT, infrastrutture, networking e assistenza hardware/software su Linux, Windows e Apple. Supporto alle aziende con XBRAIN."
+  path="/cosa-facciamo/consulenza-e-assistenza-it/"
+  jsonLd={serviceSchema}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Servizi</p>
+      <h1>Consulenza e assistenza IT</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="container content-prose">
+      <p class="lead">
+        La passione per la tecnologia ci porta ad accettare anche le sfide più complesse.
+      </p>
+      <p>
+        Supportiamo le aziende nelle decisioni su IT, infrastruttura e architettura, consigliando e implementando le
+        soluzioni più adatte a obiettivi e necessità.
+      </p>
+      <p>
+        Prediligiamo soluzioni open source in ambiente Linux, ma offriamo assistenza anche su Windows e Apple: possiamo
+        intervenire su sistemi esistenti o proporre l’approccio più adatto.
+      </p>
+      <p>
+        Ci misuriamo con hardware e software, con la convinzione che la tecnologia non sia qualcosa da temere ma uno
+        strumento concreto per migliorare il business.
+      </p>
+      <ul class="list-check">
+        <li>PC, LAN e sistemi di sicurezza</li>
+        <li>Hosting, domini e posta elettronica</li>
+        <li>Assistenza sistemistica e networking</li>
+        <li>Ambienti LAMP, housing e cloud</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

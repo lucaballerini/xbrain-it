@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+
+<BaseLayout
+  title="Chi siamo"
+  description="XBRAIN srl è uno staff giovane e dinamico di Civitanova Marche specializzato in tecnologia e comunicazione integrata per aumentare la visibilità online delle aziende."
+  path="/chi-siamo/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Chi siamo</p>
+      <h1>Tecnologia e comunicazione integrata, con cura dei dettagli</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="container content-prose">
+      <p class="lead">
+        Siamo uno staff giovane e dinamico che si occupa di tecnologia e comunicazione integrata.
+      </p>
+      <p>
+        La nostra mission è supportare le aziende per sfruttare al meglio le nuove tecnologie e aiutarle ad aumentare
+        la visibilità online. Lo facciamo con progetti su misura e un’attenta pianificazione.
+      </p>
+      <p>
+        Il nostro approccio è dinamico, coinvolgente e interattivo. Curiamo i particolari in ogni ambito perché solo
+        con la giusta attenzione si ottengono risultati di qualità.
+      </p>
+      <p>
+        Grazie a una rete di collaborazioni gestiamo le richieste dei clienti in un panorama ampio come quello del web
+        e dell’IT: siti, ecommerce, marketing, app e infrastrutture.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Cerchi un’agenzia per il tuo progetto web?"
+    text="Contattaci senza impegno per un incontro o un preventivo."
+    ctaLabel="0733 772292"
+    ctaHref="tel:+390733772292"
+  />
+</BaseLayout>

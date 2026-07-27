@@ -1,0 +1,35 @@
+# XBRAIN srl
+
+> Agenzia digitale a Civitanova Marche (MC): siti web, ecommerce, web marketing, social media, app mobile e consulenza IT.
+
+## Panoramica
+
+- **Ragione sociale:** XBRAIN srl
+- **Sito:** https://www.xbrain.it
+- **Sede:** via Ugo Bassi 1/B, Civitanova Marche (MC), Italia
+- **Email:** info@xbrain.it
+- **Telefono:** +39 0733 772292 · +39 393 8795036
+
+## Servizi principali
+
+1. **Siti web e ecommerce** — WordPress, WooCommerce, PrestaShop, soluzioni custom (`/cosa-facciamo/siti-web-e-ecommerce/`)
+2. **Web marketing e social media** — SEO, Google Ads, Meta Ads, social media marketing (`/cosa-facciamo/web-marketing-e-social-media/`)
+3. **App mobile** — iOS, iPad, Android (`/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/`)
+4. **Consulenza e assistenza IT** — infrastrutture, networking, Linux/Windows/Apple (`/cosa-facciamo/consulenza-e-assistenza-it/`)
+
+## Pagine chiave
+
+- Home: /
+- Chi siamo: /chi-siamo/
+- Cosa facciamo: /cosa-facciamo/
+- Contatti: /contatti/
+- Informativa privacy: /informativa-privacy/
+- Cookie policy: /cookie-policy/
+
+## Pubblico e area geografica
+
+PMI e professionisti in Italia, con forte presenza locale nelle Marche (Civitanova Marche e province limitrofe).
+
+## Contatto commerciale
+
+Per preventivi senza impegno: https://www.xbrain.it/contatti/

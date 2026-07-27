@@ -1,0 +1,147 @@
+---
+import { site } from '../data/site';
+---
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-live="polite">
+  <h2 id="cookie-title" style="color:white;font-size:1.05rem;margin:0 0 0.4rem">Informativa cookie</h2>
+  <p>
+    Utilizziamo cookie tecnici necessari e, solo con il tuo consenso, cookie analytics/marketing (Google Tag Manager / Analytics)
+    per misurare le visite e migliorare il sito. Puoi accettare, rifiutare o personalizzare. Maggiori dettagli nella
+    <a href="/cookie-policy/" style="color:#7fd0f5">Cookie policy</a> e nell’
+    <a href="/informativa-privacy/" style="color:#7fd0f5">Informativa privacy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-primary" data-cookie-accept>Accetta tutti</button>
+    <button type="button" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.25)" data-cookie-reject>
+      Rifiuta non necessari
+    </button>
+    <button type="button" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.25)" data-cookie-customize>
+      Personalizza
+    </button>
+  </div>
+  <div class="cookie-panel" data-cookie-panel>
+    <div class="cookie-row">
+      <span><strong>Necessari</strong> — indispensabili al funzionamento del sito</span>
+      <span>Sempre attivi</span>
+    </div>
+    <div class="cookie-row">
+      <label for="consent-analytics"><strong>Analytics</strong> — misurazione traffico (GTM / GA)</label>
+      <input id="consent-analytics" type="checkbox" data-consent-analytics />
+    </div>
+    <div class="cookie-row">
+      <label for="consent-marketing"><strong>Marketing</strong> — campagne e remarketing</label>
+      <input id="consent-marketing" type="checkbox" data-consent-marketing />
+    </div>
+    <button type="button" class="btn btn-primary" data-cookie-save>Salva preferenze</button>
+  </div>
+</div>
+
+<script is:inline define:vars={{ gtmId: site.gtmId }}>
+  (function () {
+    var KEY = 'xbrain_cookie_consent_v1';
+    var banner = document.getElementById('cookie-banner');
+    var panel = document.querySelector('[data-cookie-panel]');
+    var analyticsBox = document.querySelector('[data-consent-analytics]');
+    var marketingBox = document.querySelector('[data-consent-marketing]');
+
+    function read() {
+      try {
+        return JSON.parse(localStorage.getItem(KEY) || 'null');
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function write(value) {
+      localStorage.setItem(KEY, JSON.stringify(value));
+      window.dispatchEvent(new CustomEvent('xbrain:consent', { detail: value }));
+    }
+
+    function loadGtm() {
+      if (!gtmId || window.__xbGtmLoaded) return;
+      window.__xbGtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+      document.head.appendChild(s);
+    }
+
+    function apply(consent) {
+      if (!consent) return;
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: consent.analytics ? 'granted' : 'denied',
+          ad_storage: consent.marketing ? 'granted' : 'denied',
+          ad_user_data: consent.marketing ? 'granted' : 'denied',
+          ad_personalization: consent.marketing ? 'granted' : 'denied',
+        });
+      }
+      if (consent.analytics || consent.marketing) loadGtm();
+      if (banner) banner.classList.remove('is-visible');
+    }
+
+    // Default Consent Mode v2 (denied until choice)
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500,
+    });
+
+    var existing = read();
+    if (existing) {
+      apply(existing);
+    } else if (banner) {
+      banner.classList.add('is-visible');
+    }
+
+    document.querySelector('[data-cookie-accept]')?.addEventListener('click', function () {
+      var value = { necessary: true, analytics: true, marketing: true, ts: Date.now() };
+      write(value);
+      apply(value);
+    });
+
+    document.querySelector('[data-cookie-reject]')?.addEventListener('click', function () {
+      var value = { necessary: true, analytics: false, marketing: false, ts: Date.now() };
+      write(value);
+      apply(value);
+    });
+
+    document.querySelector('[data-cookie-customize]')?.addEventListener('click', function () {
+      panel?.classList.toggle('is-open');
+    });
+
+    document.querySelector('[data-cookie-save]')?.addEventListener('click', function () {
+      var value = {
+        necessary: true,
+        analytics: !!(analyticsBox && analyticsBox.checked),
+        marketing: !!(marketingBox && marketingBox.checked),
+        ts: Date.now(),
+      };
+      write(value);
+      apply(value);
+    });
+
+    document.querySelectorAll('[data-open-cookie-settings]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var current = read() || {};
+        if (analyticsBox) analyticsBox.checked = !!current.analytics;
+        if (marketingBox) marketingBox.checked = !!current.marketing;
+        if (banner) {
+          banner.classList.add('is-visible');
+          panel?.classList.add('is-open');
+        }
+      });
+    });
+  })();
+</script>

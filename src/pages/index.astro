@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { services, technologies, site } from '../data/site';
+
+const title = 'Consulenza IT, siti web, ecommerce e web marketing a Civitanova Marche';
+const description =
+  'XBRAIN srl: agenzia digitale a Civitanova Marche per siti web, ecommerce, SEO, Google Ads, social media, app mobile e consulenza IT. Preventivo gratuito.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Cosa fa XBRAIN srl?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'XBRAIN realizza siti web, ecommerce, campagne di web marketing e social media, applicazioni mobile iOS/Android e offre consulenza e assistenza IT a Civitanova Marche e in Italia.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Dove si trova XBRAIN?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `XBRAIN srl ha sede in ${site.address.street}, ${site.address.city} (${site.address.region}).`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Come richiedere un preventivo?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Puoi compilare il form nella pagina Contatti o chiamare lo 0733 772 292. Il preventivo è senza impegno.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} path="/" jsonLd={faqSchema}>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow reveal">Agenzia digitale · Civitanova Marche</p>
+      <p class="hero-brand reveal">
+        <span>X</span>BRAIN
+      </p>
+      <h1 class="reveal reveal-delay-1">
+        Consulenza ecommerce e web marketing con passione e idee concrete
+      </h1>
+      <p class="lead reveal reveal-delay-2">
+        Ogni progetto è trattato con attenzione: nessuna azienda è uguale a un’altra. Ti supportiamo su siti web,
+        ecommerce, marketing digitale, app e infrastrutture IT.
+      </p>
+      <div class="hero-actions reveal reveal-delay-2">
+        <a class="btn btn-primary" href="/contatti/">Richiedi preventivo gratuito</a>
+        <a class="btn btn-ghost" href="/cosa-facciamo/">Scopri i servizi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Cosa facciamo</p>
+      <h2 style="max-width:18ch;font-size:clamp(1.7rem,3.5vw,2.5rem)">
+        Servizi digitali per far crescere il tuo business online
+      </h2>
+      <div class="services-grid" style="margin-top:2rem">
+        {
+          services.map((service) => (
+            <article class="service-item">
+              <img src={service.icon} alt="" width="64" height="64" loading="lazy" decoding="async" />
+              <h3>
+                <a href={service.href}>{service.title}</a>
+              </h3>
+              <p>{service.summary}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="tech-marquee" aria-label="Piattaforme e tecnologie utilizzate">
+    <div class="tech-track">
+      {[...technologies, ...technologies].map((tech) => <span>{tech}</span>)}
+    </div>
+  </div>
+
+  <section class="section section-muted">
+    <div class="container split-2">
+      <div>
+        <p class="eyebrow">Perché XBRAIN</p>
+        <h2>Progetti su misura, non template anonimi</h2>
+        <p>
+          Affianchiamo aziende e professionisti con un approccio pratico: strategia, design, sviluppo e promozione
+          lavorano insieme. Dalla sede di Civitanova Marche operiamo su progetti locali e nazionali.
+        </p>
+        <ul class="list-check">
+          <li>Analisi obiettivi e scelta della piattaforma più adatta</li>
+          <li>Sviluppo mobile first e attenzione alle performance SEO</li>
+          <li>Campagne misurabili su Google Ads e Meta</li>
+          <li>Supporto IT continuo su infrastrutture e sicurezza</li>
+        </ul>
+        <a class="btn btn-primary" href="/chi-siamo/">Scopri chi siamo</a>
+      </div>
+      <aside class="contact-card">
+        <h3 style="font-size:1.2rem">Risposte rapide</h3>
+        <p><strong>Dove operate?</strong><br />Civitanova Marche e tutta Italia, anche da remoto.</p>
+        <p><strong>Lavorate su WordPress ed ecommerce?</strong><br />Sì: WordPress, WooCommerce, PrestaShop e soluzioni custom.</p>
+        <p><strong>Gestite anche le ads?</strong><br />Sì: Google Ads, Meta Ads e piani social coordinati.</p>
+      </aside>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

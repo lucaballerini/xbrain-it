@@ -1,0 +1,20 @@
+{
+  "name": "xbrain-it",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sito ufficiale XBRAIN srl — Astro, Core Web Vitals first",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.1.3"
+  }
+}

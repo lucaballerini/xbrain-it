@@ -1,0 +1,25 @@
+---
+interface Props {
+  title?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const {
+  title = 'Vuoi iniziare un progetto insieme a noi?',
+  text = 'Contattaci senza impegno: valuteremo insieme la soluzione migliore tra web, web marketing, ecommerce o app per i tuoi obiettivi.',
+  ctaLabel = 'Contattaci',
+  ctaHref = '/contatti/',
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between">
+    <div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+    </div>
+    <a class="btn" href={ctaHref} style="background:white;color:#0088ca;font-weight:800">{ctaLabel}</a>
+  </div>
+</section>
