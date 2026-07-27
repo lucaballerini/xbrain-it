@@ -14,8 +14,8 @@
   --xb-radius-pill: 999px;
   --xb-shadow: 0 18px 50px rgba(10, 15, 20, 0.08);
   --xb-max: 1120px;
-  --font-display: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "SF Pro Display", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color-scheme: light;
 }
 
@@ -753,5 +753,34 @@ p {
   .hero {
     min-height: auto;
     align-items: start;
+  }
+
+  /* Improve mobile FCP/LCP: avoid initial hidden hero content and heavy effects */
+  .hero::before {
+    animation: none;
+  }
+
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2 {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .tech-track,
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2 {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
