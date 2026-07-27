@@ -173,60 +173,18 @@ p {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   color: inherit;
   text-decoration: none;
-  min-width: 0;
 }
 
 .logo:hover {
   color: inherit;
 }
 
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
-  min-width: 0;
-}
-
-.logo-name {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  color: var(--xb-ink);
-}
-
-.logo-name span {
-  color: var(--xb-blue);
-}
-
-.logo-tag {
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  line-height: 1.2;
-  color: var(--xb-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 220px;
-}
-
-.logo-on-dark .logo-name {
-  color: #ffffff;
-}
-
-.logo-on-dark .logo-tag {
-  color: rgba(255, 255, 255, 0.72);
+.logo img {
+  width: min(200px, 52vw);
+  height: auto;
+  display: block;
 }
 
 .nav {
@@ -746,10 +704,6 @@ p {
 }
 
 @media (max-width: 780px) {
-  .logo-tag {
-    max-width: 150px;
-  }
-
   .menu-toggle {
     display: inline-flex;
   }
