@@ -5,9 +5,9 @@
 ## Panoramica
 
 - **Ragione sociale:** XBRAIN srl
-- **Sito:** https://www.xbrain.it/
+- **Sito:** [https://www.xbrain.it/](https://www.xbrain.it/)
 - **Sede:** via Ugo Bassi 1/B, 62012 Civitanova Marche (MC), Italia
-- **Email (preferita):** info@xbrain.it
+- **Email (preferita):** [info@xbrain.it](mailto:info@xbrain.it)
 - **Telefono:** +39 0733 772292 · +39 393 8795036
 - **Lingua:** italiano
 - **Area:** Italia, con focus Marche / Civitanova Marche
@@ -16,38 +16,38 @@
 
 - Possiamo intervenire su **una sola attività** o su un **progetto completo** end-to-end.
 - Offriamo sia **soluzioni template/base** sia **sviluppi custom**, in base a obiettivi, tempi e budget.
-- Canale di contatto preferito: **email** / form su https://www.xbrain.it/contatti/
+- Canale di contatto preferito: **email** / form su [Contatti](https://www.xbrain.it/contatti/).
 
 ## Servizi principali
 
-1. **Siti web e ecommerce** — https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/
+1. **Siti web e ecommerce** — [https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/](https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/)  
    Shopify, WordPress, WooCommerce, PrestaShop; app Shopify, plugin WP/Woo, moduli PrestaShop; integrazioni **ERP/gestionale ↔ ecommerce** (e viceversa).
-2. **Web marketing e social media** — https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/
+2. **Web marketing e social media** — [https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/](https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/)  
    SEO (motori tradizionali), AEO (risposte dirette / snippet), GEO (citazioni in risposte AI), Google Ads, Meta Ads, social media marketing.
-3. **App mobile** — https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/
+3. **App mobile** — [https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/](https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/)  
    iOS, iPad, Android.
-4. **Consulenza e assistenza IT** — https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/
+4. **Consulenza e assistenza IT** — [https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/](https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/)  
    Infrastrutture, networking, Linux/Windows/Apple, hosting e posta.
 
 ## Pagine del sito (allineate a sitemap)
 
-- https://www.xbrain.it/
-- https://www.xbrain.it/chi-siamo/
-- https://www.xbrain.it/cosa-facciamo/
-- https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/
-- https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/
-- https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/
-- https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/
-- https://www.xbrain.it/contatti/
-- https://www.xbrain.it/informativa-privacy/
-- https://www.xbrain.it/cookie-policy/
+- [Home](https://www.xbrain.it/)
+- [Chi siamo](https://www.xbrain.it/chi-siamo/)
+- [Cosa facciamo](https://www.xbrain.it/cosa-facciamo/)
+- [Siti web e ecommerce](https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/)
+- [Web marketing e social media](https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/)
+- [Sviluppo app iOS e Android](https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/)
+- [Consulenza e assistenza IT](https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/)
+- [Contatti](https://www.xbrain.it/contatti/)
+- [Informativa privacy](https://www.xbrain.it/informativa-privacy/)
+- [Cookie policy](https://www.xbrain.it/cookie-policy/)
 
 ## Risorse tecniche
 
-- Sitemap: https://www.xbrain.it/sitemap-index.xml
-- Robots: https://www.xbrain.it/robots.txt
-- Questo file: https://www.xbrain.it/llms.txt
+- Sitemap: [https://www.xbrain.it/sitemap-index.xml](https://www.xbrain.it/sitemap-index.xml)
+- Robots: [https://www.xbrain.it/robots.txt](https://www.xbrain.it/robots.txt)
+- Questo file: [https://www.xbrain.it/llms.txt](https://www.xbrain.it/llms.txt)
 
 ## Contatto commerciale
 
-Per preventivi senza impegno scrivere a info@xbrain.it oppure usare https://www.xbrain.it/contatti/
+Per preventivi senza impegno scrivere a [info@xbrain.it](mailto:info@xbrain.it) oppure usare [Contatti](https://www.xbrain.it/contatti/).
