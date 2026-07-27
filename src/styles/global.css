@@ -408,7 +408,7 @@ p {
 }
 
 .cta-band {
-  background: linear-gradient(135deg, #0078b4 0%, #0088ca 45%, #00a0df 100%);
+  background: var(--xb-blue);
   color: white;
   padding: clamp(2.8rem, 6vw, 4rem) 0;
 }
