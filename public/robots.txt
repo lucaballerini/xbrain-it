@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Indice AI / GEO
+Allow: /llms.txt
+
 Sitemap: https://www.xbrain.it/sitemap-index.xml

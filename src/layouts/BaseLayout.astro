@@ -23,9 +23,17 @@ const orgSchema = {
   logo: `${site.url}/images/logo.png`,
   image: `${site.url}/images/logo.png`,
   email: site.email,
-  telephone: site.phoneDisplay,
+  telephone: [site.phoneDisplay, site.mobileDisplay],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    email: site.email,
+    telephone: site.phoneDisplay,
+    areaServed: 'IT',
+    availableLanguage: ['Italian'],
+  },
   description:
-    'Agenzia digitale a Civitanova Marche: siti web, ecommerce, web marketing, social media, app mobile e consulenza IT.',
+    'Agenzia digitale a Civitanova Marche: siti web, ecommerce, integrazioni ERP/gestionale, SEO/AEO/GEO, social media, app mobile e consulenza IT. Contatto preferito via email.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: site.address.street,

@@ -1,35 +1,53 @@
 # XBRAIN srl
 
-> Agenzia digitale a Civitanova Marche (MC): siti web, ecommerce, web marketing, social media, app mobile e consulenza IT.
+> Agenzia digitale a Civitanova Marche (MC): siti web, ecommerce, integrazioni ERP/gestionale, web marketing (SEO/AEO/GEO), social media, app mobile e consulenza IT.
 
 ## Panoramica
 
 - **Ragione sociale:** XBRAIN srl
-- **Sito:** https://www.xbrain.it
-- **Sede:** via Ugo Bassi 1/B, Civitanova Marche (MC), Italia
-- **Email:** info@xbrain.it
+- **Sito:** https://www.xbrain.it/
+- **Sede:** via Ugo Bassi 1/B, 62012 Civitanova Marche (MC), Italia
+- **Email (preferita):** info@xbrain.it
 - **Telefono:** +39 0733 772292 · +39 393 8795036
+- **Lingua:** italiano
+- **Area:** Italia, con focus Marche / Civitanova Marche
+
+## Come lavoriamo
+
+- Possiamo intervenire su **una sola attività** o su un **progetto completo** end-to-end.
+- Offriamo sia **soluzioni template/base** sia **sviluppi custom**, in base a obiettivi, tempi e budget.
+- Canale di contatto preferito: **email** / form su https://www.xbrain.it/contatti/
 
 ## Servizi principali
 
-1. **Siti web e ecommerce** — Shopify, WordPress, WooCommerce, PrestaShop, soluzioni custom, integrazioni ERP/gestionale ↔ ecommerce (`/cosa-facciamo/siti-web-e-ecommerce/`)
-2. **Web marketing e social media** — SEO, AEO, GEO, Google Ads, Meta Ads, social media marketing (`/cosa-facciamo/web-marketing-e-social-media/`)
-3. **App mobile** — iOS, iPad, Android (`/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/`)
-4. **Consulenza e assistenza IT** — infrastrutture, networking, Linux/Windows/Apple (`/cosa-facciamo/consulenza-e-assistenza-it/`)
+1. **Siti web e ecommerce** — https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/
+   Shopify, WordPress, WooCommerce, PrestaShop; app Shopify, plugin WP/Woo, moduli PrestaShop; integrazioni **ERP/gestionale ↔ ecommerce** (e viceversa).
+2. **Web marketing e social media** — https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/
+   SEO (motori tradizionali), AEO (risposte dirette / snippet), GEO (citazioni in risposte AI), Google Ads, Meta Ads, social media marketing.
+3. **App mobile** — https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/
+   iOS, iPad, Android.
+4. **Consulenza e assistenza IT** — https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/
+   Infrastrutture, networking, Linux/Windows/Apple, hosting e posta.
 
-## Pagine chiave
+## Pagine del sito (allineate a sitemap)
 
-- Home: /
-- Chi siamo: /chi-siamo/
-- Cosa facciamo: /cosa-facciamo/
-- Contatti: /contatti/
-- Informativa privacy: /informativa-privacy/
-- Cookie policy: /cookie-policy/
+- https://www.xbrain.it/
+- https://www.xbrain.it/chi-siamo/
+- https://www.xbrain.it/cosa-facciamo/
+- https://www.xbrain.it/cosa-facciamo/siti-web-e-ecommerce/
+- https://www.xbrain.it/cosa-facciamo/web-marketing-e-social-media/
+- https://www.xbrain.it/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/
+- https://www.xbrain.it/cosa-facciamo/consulenza-e-assistenza-it/
+- https://www.xbrain.it/contatti/
+- https://www.xbrain.it/informativa-privacy/
+- https://www.xbrain.it/cookie-policy/
 
-## Pubblico e area geografica
+## Risorse tecniche
 
-PMI e professionisti in Italia, con forte presenza locale nelle Marche (Civitanova Marche e province limitrofe).
+- Sitemap: https://www.xbrain.it/sitemap-index.xml
+- Robots: https://www.xbrain.it/robots.txt
+- Questo file: https://www.xbrain.it/llms.txt
 
 ## Contatto commerciale
 
-Per preventivi senza impegno: https://www.xbrain.it/contatti/
+Per preventivi senza impegno scrivere a info@xbrain.it oppure usare https://www.xbrain.it/contatti/
