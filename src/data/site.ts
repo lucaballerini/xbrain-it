@@ -63,7 +63,7 @@ export const services = [
     href: '/cosa-facciamo/siti-web-e-ecommerce/',
     icon: '/icons/cart.png',
     summary:
-      'Realizziamo e consuliamo negozi online: partenza da zero o ottimizzazione di shop già attivi, con assistenza e sviluppo su misura.',
+      'Negozi online da zero o già attivi, con assistenza, sviluppo e integrazioni ERP/gestionale ↔ ecommerce.',
   },
   {
     slug: 'siti-web',

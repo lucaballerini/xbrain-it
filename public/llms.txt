@@ -12,7 +12,7 @@
 
 ## Servizi principali
 
-1. **Siti web e ecommerce** — Shopify, WordPress, WooCommerce, PrestaShop, soluzioni custom (`/cosa-facciamo/siti-web-e-ecommerce/`)
+1. **Siti web e ecommerce** — Shopify, WordPress, WooCommerce, PrestaShop, soluzioni custom, integrazioni ERP/gestionale ↔ ecommerce (`/cosa-facciamo/siti-web-e-ecommerce/`)
 2. **Web marketing e social media** — SEO, AEO, GEO, Google Ads, Meta Ads, social media marketing (`/cosa-facciamo/web-marketing-e-social-media/`)
 3. **App mobile** — iOS, iPad, Android (`/cosa-facciamo/sviluppo-applicazioni-iphone-e-ipad/`)
 4. **Consulenza e assistenza IT** — infrastrutture, networking, Linux/Windows/Apple (`/cosa-facciamo/consulenza-e-assistenza-it/`)
