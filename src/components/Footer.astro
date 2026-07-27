@@ -6,7 +6,13 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="/images/logo-white.png" alt={site.name} width="180" height="43" loading="lazy" decoding="async" />
+      <a class="logo logo-on-dark" href="/" aria-label={`${site.name} — Home`}>
+        <img class="logo-mark" src="/images/logo-mark.svg" alt="" width="36" height="36" loading="lazy" decoding="async" />
+        <span class="logo-text">
+          <span class="logo-name"><span>X</span>BRAIN</span>
+          <span class="logo-tag">{site.tagline}</span>
+        </span>
+      </a>
       <p>
         {site.name} realizza ecommerce, siti web, app mobile e campagne di web marketing a Civitanova Marche e in tutta Italia.
       </p>
