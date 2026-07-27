@@ -79,7 +79,7 @@ export const services = [
     href: '/cosa-facciamo/web-marketing-e-social-media/',
     icon: '/icons/web_marketing.png',
     summary:
-      'Campagne ecommerce, lead generation, Google Ads e SEO per rendere il tuo sito più visibile ai clienti giusti.',
+      'Campagne ecommerce, lead generation, Google Ads, SEO, AEO e GEO per rendere il tuo brand più visibile su motori, AI e clienti giusti.',
   },
   {
     slug: 'social-media',
