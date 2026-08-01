@@ -1,7 +1,7 @@
 ---
 /**
- * Decorative hero graphic — stylized brain + neural links.
- * Inline SVG (~2–3KB), no HTTP, no filters; pulse desktop-only.
+ * Decorative hero graphic — soft blob + network + cloud accent.
+ * Inline SVG, no HTTP, no filters; pulse desktop-only.
  */
 ---
 
@@ -14,91 +14,53 @@
   focusable="false"
 >
   <defs>
-    <linearGradient id="brainFill" x1="70" y1="40" x2="360" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0088ca" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#006291" stop-opacity="0.1" />
+    <linearGradient id="heroGrad" x1="40" y1="40" x2="380" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0088ca" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#006291" stop-opacity="0.08" />
     </linearGradient>
   </defs>
 
-  <!-- Left hemisphere -->
+  <!-- soft plane -->
   <path
-    fill="url(#brainFill)"
-    stroke="#0088ca"
-    stroke-opacity="0.35"
-    stroke-width="1.5"
-    d="M206 58c-28-8-58-2-82 18-28 24-42 62-38 102 3 28 16 52 36 68 14 12 18 28 10 42-6 10 2 18 14 14 18-6 34-4 48 8 8 6 18 4 22-4V66c-2-6-6-8-10-8Z"
+    fill="url(#heroGrad)"
+    d="M48 86c42-54 148-74 230-48 72 22 118 78 110 142-8 64-72 116-154 128-86 12-168-18-206-78-28-46-20-98 20-144Z"
   />
 
-  <!-- Right hemisphere -->
-  <path
-    fill="url(#brainFill)"
-    stroke="#0088ca"
-    stroke-opacity="0.35"
-    stroke-width="1.5"
-    d="M214 58c28-8 58-2 82 18 28 24 42 62 38 102-3 28-16 52-36 68-14 12-18 28-10 42 6 10-2 18-14 14-18-6-34-4-48 8-8 6-18 4-22-4V66c2-6 6-8 10-8Z"
-  />
-
-  <!-- Midline -->
-  <path
-    d="M210 66 V292"
-    fill="none"
-    stroke="#006291"
-    stroke-width="1.5"
-    stroke-opacity="0.25"
-    stroke-dasharray="3 5"
-  />
-
-  <!-- Gyri / folds (left) -->
-  <g fill="none" stroke="#0088ca" stroke-width="1.4" stroke-opacity="0.4" stroke-linecap="round">
-    <path d="M126 98c22-18 48-20 68-8" />
-    <path d="M112 138c26-14 54-12 74 4" />
-    <path d="M118 178c24-10 50-6 68 12" />
-    <path d="M132 218c20-8 42-4 58 10" />
-    <path d="M148 252c16-6 34 0 46 12" />
+  <!-- network links -->
+  <g fill="none" stroke="#0088ca" stroke-width="1.5" stroke-opacity="0.35">
+    <path d="M92 118 L168 96 L248 132 L312 88" />
+    <path d="M168 96 L186 178 L248 132" />
+    <path d="M186 178 L248 236 L312 198" />
+    <path d="M248 132 L312 198 L348 148" />
+    <path d="M92 118 L124 208 L186 178" />
   </g>
 
-  <!-- Gyri / folds (right) -->
-  <g fill="none" stroke="#0088ca" stroke-width="1.4" stroke-opacity="0.4" stroke-linecap="round">
-    <path d="M294 98c-22-18-48-20-68-8" />
-    <path d="M308 138c-26-14-54-12-74 4" />
-    <path d="M302 178c-24-10-50-6-68 12" />
-    <path d="M288 218c-20-8-42-4-58 10" />
-    <path d="M272 252c-16-6-34 0-46 12" />
-  </g>
-
-  <!-- Neural links -->
-  <g fill="none" stroke="#006291" stroke-width="1.25" stroke-opacity="0.32">
-    <path d="M152 128 L188 156 L210 148" />
-    <path d="M268 128 L232 156 L210 148" />
-    <path d="M168 188 L210 176 L252 188" />
-    <path d="M186 228 L210 206 L234 228" />
-  </g>
-
-  <!-- Synapse nodes -->
+  <!-- nodes -->
   <g fill="#0088ca">
-    <circle class="hero-node" cx="152" cy="128" r="5" fill-opacity="0.8" />
-    <circle class="hero-node hero-node-2" cx="188" cy="156" r="6.5" fill-opacity="0.95" />
-    <circle class="hero-node" cx="268" cy="128" r="5" fill-opacity="0.8" />
-    <circle class="hero-node hero-node-3" cx="232" cy="156" r="6.5" fill-opacity="0.95" />
-    <circle class="hero-node hero-node-2" cx="210" cy="148" r="7.5" />
-    <circle class="hero-node" cx="168" cy="188" r="5" fill-opacity="0.75" />
-    <circle class="hero-node" cx="252" cy="188" r="5" fill-opacity="0.75" />
-    <circle class="hero-node hero-node-3" cx="210" cy="176" r="6" fill-opacity="0.9" />
-    <circle class="hero-node" cx="186" cy="228" r="4.5" fill-opacity="0.7" />
-    <circle class="hero-node" cx="234" cy="228" r="4.5" fill-opacity="0.7" />
-    <circle class="hero-node" cx="210" cy="206" r="5.5" fill-opacity="0.85" />
+    <circle class="hero-node" cx="92" cy="118" r="7" fill-opacity="0.85" />
+    <circle class="hero-node hero-node-2" cx="168" cy="96" r="9" fill-opacity="0.95" />
+    <circle class="hero-node hero-node-3" cx="248" cy="132" r="8" fill-opacity="0.9" />
+    <circle class="hero-node" cx="312" cy="88" r="6" fill-opacity="0.75" />
+    <circle class="hero-node hero-node-2" cx="186" cy="178" r="10" />
+    <circle class="hero-node" cx="248" cy="236" r="7" fill-opacity="0.8" />
+    <circle class="hero-node hero-node-3" cx="312" cy="198" r="8" fill-opacity="0.88" />
+    <circle class="hero-node" cx="348" cy="148" r="6" fill-opacity="0.7" />
+    <circle class="hero-node" cx="124" cy="208" r="6" fill-opacity="0.72" />
   </g>
 
-  <!-- Soft outer ring (activity) -->
-  <ellipse
-    class="hero-ring"
-    cx="210"
-    cy="170"
-    rx="128"
-    ry="108"
-    fill="none"
-    stroke="#006291"
-    stroke-width="1.25"
-    stroke-opacity="0.16"
-  />
+  <!-- cloud accent (replaces ring) -->
+  <g class="hero-ring" fill="#006291" fill-opacity="0.16" stroke="#006291" stroke-opacity="0.35" stroke-width="1.4">
+    <path
+      d="M150 168
+         c0-14 10-26 24-28
+         c4-16 20-28 38-26
+         c16 2 28 12 34 26
+         c14 0 26 12 26 28
+         c0 16-12 28-28 28
+         H162
+         c-12 0-22-10-22-22
+         c0-2 0-4 1-6
+         c-5-2-9-7-9-12Z"
+    />
+  </g>
 </svg>
