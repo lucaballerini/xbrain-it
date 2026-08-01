@@ -330,6 +330,75 @@ p {
   margin-top: 1.6rem;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-aside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-visual {
+  width: min(100%, 420px);
+  height: auto;
+  display: block;
+}
+
+.hero-node,
+.hero-ring {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@media (min-width: 781px) {
+  .hero-node-2 {
+    animation: hero-pulse 3.6s ease-in-out infinite;
+  }
+
+  .hero-node-3 {
+    animation: hero-pulse 3.6s ease-in-out 0.8s infinite;
+  }
+
+  .hero-ring {
+    animation: hero-ring 4.2s ease-in-out infinite;
+  }
+}
+
+@keyframes hero-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes hero-ring {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.08);
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -755,6 +824,21 @@ p {
     align-items: start;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero-aside {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+    opacity: 0.72;
+  }
+
+  .hero-visual {
+    width: min(100%, 280px);
+  }
+
   /* Improve mobile FCP/LCP: avoid initial hidden hero content and heavy effects */
   .hero::before {
     animation: none;
@@ -774,7 +858,10 @@ p {
   .tech-track,
   .reveal,
   .reveal-delay-1,
-  .reveal-delay-2 {
+  .reveal-delay-2,
+  .hero-node-2,
+  .hero-node-3,
+  .hero-ring {
     animation: none !important;
     transition: none !important;
   }

@@ -1,0 +1,62 @@
+---
+/**
+ * Decorative hero graphic — inline SVG (0 HTTP requests).
+ * Keep paths minimal; no filters/blur; animation desktop-only via CSS.
+ */
+---
+
+<svg
+  class="hero-visual"
+  viewBox="0 0 420 360"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient id="heroGrad" x1="40" y1="40" x2="380" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0088ca" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#006291" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- soft plane -->
+  <path
+    fill="url(#heroGrad)"
+    d="M48 86c42-54 148-74 230-48 72 22 118 78 110 142-8 64-72 116-154 128-86 12-168-18-206-78-28-46-20-98 20-144Z"
+  />
+
+  <!-- network links -->
+  <g fill="none" stroke="#0088ca" stroke-width="1.5" stroke-opacity="0.35">
+    <path d="M92 118 L168 96 L248 132 L312 88" />
+    <path d="M168 96 L186 178 L248 132" />
+    <path d="M186 178 L248 236 L312 198" />
+    <path d="M248 132 L312 198 L348 148" />
+    <path d="M92 118 L124 208 L186 178" />
+  </g>
+
+  <!-- nodes -->
+  <g fill="#0088ca">
+    <circle class="hero-node" cx="92" cy="118" r="7" fill-opacity="0.85" />
+    <circle class="hero-node hero-node-2" cx="168" cy="96" r="9" fill-opacity="0.95" />
+    <circle class="hero-node hero-node-3" cx="248" cy="132" r="8" fill-opacity="0.9" />
+    <circle class="hero-node" cx="312" cy="88" r="6" fill-opacity="0.75" />
+    <circle class="hero-node hero-node-2" cx="186" cy="178" r="10" />
+    <circle class="hero-node" cx="248" cy="236" r="7" fill-opacity="0.8" />
+    <circle class="hero-node hero-node-3" cx="312" cy="198" r="8" fill-opacity="0.88" />
+    <circle class="hero-node" cx="348" cy="148" r="6" fill-opacity="0.7" />
+    <circle class="hero-node" cx="124" cy="208" r="6" fill-opacity="0.72" />
+  </g>
+
+  <!-- accent ring -->
+  <circle
+    cx="186"
+    cy="178"
+    r="22"
+    fill="none"
+    stroke="#006291"
+    stroke-width="1.5"
+    stroke-opacity="0.28"
+    class="hero-ring"
+  />
+</svg>

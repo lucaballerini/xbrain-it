@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
+import HeroVisual from '../components/HeroVisual.astro';
 import { services, technologies, site } from '../data/site';
 
 const title = 'Consulenza IT, siti web, ecommerce e web marketing a Civitanova Marche';
@@ -41,21 +42,26 @@ const faqSchema = {
 
 <BaseLayout title={title} description={description} path="/" jsonLd={faqSchema}>
   <section class="hero">
-    <div class="container">
-      <p class="eyebrow reveal">Agenzia digitale · Civitanova Marche</p>
-      <p class="hero-brand reveal">
-        <span>X</span>BRAIN
-      </p>
-      <h1 class="reveal reveal-delay-1">
-        Consulenza ecommerce e web marketing con passione e idee concrete
-      </h1>
-      <p class="lead reveal reveal-delay-2">
-        Ogni progetto è trattato con attenzione: nessuna azienda è uguale a un’altra. Ti supportiamo su siti web,
-        ecommerce, marketing digitale, app e infrastrutture IT.
-      </p>
-      <div class="hero-actions reveal reveal-delay-2">
-        <a class="btn btn-primary" href="/contatti/">Scrivici per un preventivo</a>
-        <a class="btn btn-ghost" href="/cosa-facciamo/">Scopri i servizi</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Agenzia digitale · Civitanova Marche</p>
+        <p class="hero-brand reveal">
+          <span>X</span>BRAIN
+        </p>
+        <h1 class="reveal reveal-delay-1">
+          Consulenza ecommerce e web marketing con passione e idee concrete
+        </h1>
+        <p class="lead reveal reveal-delay-2">
+          Ogni progetto è trattato con attenzione: nessuna azienda è uguale a un’altra. Ti supportiamo su siti web,
+          ecommerce, marketing digitale, app e infrastrutture IT.
+        </p>
+        <div class="hero-actions reveal reveal-delay-2">
+          <a class="btn btn-primary" href="/contatti/">Scrivici per un preventivo</a>
+          <a class="btn btn-ghost" href="/cosa-facciamo/">Scopri i servizi</a>
+        </div>
+      </div>
+      <div class="hero-aside" aria-hidden="true">
+        <HeroVisual />
       </div>
     </div>
   </section>
