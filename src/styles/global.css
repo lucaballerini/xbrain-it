@@ -355,8 +355,7 @@ p {
   display: block;
 }
 
-.hero-node,
-.hero-ring {
+.hero-node {
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -369,10 +368,6 @@ p {
   .hero-node-3 {
     animation: hero-pulse 3.6s ease-in-out 0.8s infinite;
   }
-
-  .hero-ring {
-    animation: hero-ring 4.2s ease-in-out infinite;
-  }
 }
 
 @keyframes hero-pulse {
@@ -384,18 +379,6 @@ p {
   50% {
     opacity: 1;
     transform: scale(1.12);
-  }
-}
-
-@keyframes hero-ring {
-  0%,
-  100% {
-    opacity: 0.22;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(1.08);
   }
 }
 
@@ -860,8 +843,7 @@ p {
   .reveal-delay-1,
   .reveal-delay-2,
   .hero-node-2,
-  .hero-node-3,
-  .hero-ring {
+  .hero-node-3 {
     animation: none !important;
     transition: none !important;
   }

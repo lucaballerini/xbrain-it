@@ -1,6 +1,6 @@
 ---
 /**
- * Decorative hero graphic — soft blob + network + cloud accent.
+ * Decorative hero graphic — cloud as outer container + network inside.
  * Inline SVG, no HTTP, no filters; pulse desktop-only.
  */
 ---
@@ -14,53 +14,90 @@
   focusable="false"
 >
   <defs>
-    <linearGradient id="heroGrad" x1="40" y1="40" x2="380" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0088ca" stop-opacity="0.28" />
-      <stop offset="100%" stop-color="#006291" stop-opacity="0.08" />
+    <linearGradient id="cloudFill" x1="40" y1="60" x2="380" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0088ca" stop-opacity="0.26" />
+      <stop offset="100%" stop-color="#006291" stop-opacity="0.1" />
     </linearGradient>
+    <clipPath id="cloudClip">
+      <path
+        d="M78 228
+           c-28 0-50-22-50-50
+           c0-24 16-44 38-49
+           c4-36 34-64 72-64
+           c22 0 42 8 56 22
+           c16-28 46-46 80-46
+           c52 0 94 40 96 91
+           c28 4 50 28 50 56
+           c0 32-26 58-58 58
+           H108
+           c-16 0-30-14-30-30
+           c0-4 1-8 2-12
+           c-1 0-2 0-2 0Z"
+      />
+    </clipPath>
   </defs>
 
-  <!-- soft plane -->
+  <!-- Cloud container -->
   <path
-    fill="url(#heroGrad)"
-    d="M48 86c42-54 148-74 230-48 72 22 118 78 110 142-8 64-72 116-154 128-86 12-168-18-206-78-28-46-20-98 20-144Z"
+    fill="url(#cloudFill)"
+    stroke="#0088ca"
+    stroke-width="1.75"
+    stroke-opacity="0.4"
+    d="M78 228
+       c-28 0-50-22-50-50
+       c0-24 16-44 38-49
+       c4-36 34-64 72-64
+       c22 0 42 8 56 22
+       c16-28 46-46 80-46
+       c52 0 94 40 96 91
+       c28 4 50 28 50 56
+       c0 32-26 58-58 58
+       H108
+       c-16 0-30-14-30-30
+       c0-4 1-8 2-12
+       c-1 0-2 0-2 0Z"
   />
 
-  <!-- network links -->
-  <g fill="none" stroke="#0088ca" stroke-width="1.5" stroke-opacity="0.35">
-    <path d="M92 118 L168 96 L248 132 L312 88" />
-    <path d="M168 96 L186 178 L248 132" />
-    <path d="M186 178 L248 236 L312 198" />
-    <path d="M248 132 L312 198 L348 148" />
-    <path d="M92 118 L124 208 L186 178" />
-  </g>
+  <!-- Soft inner highlight -->
+  <path
+    fill="#ffffff"
+    fill-opacity="0.18"
+    d="M120 150
+       c8-28 36-48 68-48
+       c18 0 34 6 46 18
+       c12-18 32-30 56-30
+       c34 0 62 24 66 56
+       c-22-8-48-6-70 8
+       c-18-16-44-22-70-16
+       c-24 6-42 22-52 44
+       c-14-10-30-16-44-16
+       c-4 0-8 0-12 1
+       c2-6 6-12 12-17Z"
+  />
 
-  <!-- nodes -->
-  <g fill="#0088ca">
-    <circle class="hero-node" cx="92" cy="118" r="7" fill-opacity="0.85" />
-    <circle class="hero-node hero-node-2" cx="168" cy="96" r="9" fill-opacity="0.95" />
-    <circle class="hero-node hero-node-3" cx="248" cy="132" r="8" fill-opacity="0.9" />
-    <circle class="hero-node" cx="312" cy="88" r="6" fill-opacity="0.75" />
-    <circle class="hero-node hero-node-2" cx="186" cy="178" r="10" />
-    <circle class="hero-node" cx="248" cy="236" r="7" fill-opacity="0.8" />
-    <circle class="hero-node hero-node-3" cx="312" cy="198" r="8" fill-opacity="0.88" />
-    <circle class="hero-node" cx="348" cy="148" r="6" fill-opacity="0.7" />
-    <circle class="hero-node" cx="124" cy="208" r="6" fill-opacity="0.72" />
-  </g>
+  <!-- Network clipped inside cloud -->
+  <g clip-path="url(#cloudClip)">
+    <g fill="none" stroke="#0088ca" stroke-width="1.5" stroke-opacity="0.4">
+      <path d="M110 180 L168 148 L236 168 L300 132" />
+      <path d="M168 148 L186 208 L236 168" />
+      <path d="M186 208 L248 246 L304 210" />
+      <path d="M236 168 L304 210 L340 170" />
+      <path d="M110 180 L140 236 L186 208" />
+      <path d="M168 148 L210 118 L268 140" />
+    </g>
 
-  <!-- cloud accent (replaces ring) -->
-  <g class="hero-ring" fill="#006291" fill-opacity="0.16" stroke="#006291" stroke-opacity="0.35" stroke-width="1.4">
-    <path
-      d="M150 168
-         c0-14 10-26 24-28
-         c4-16 20-28 38-26
-         c16 2 28 12 34 26
-         c14 0 26 12 26 28
-         c0 16-12 28-28 28
-         H162
-         c-12 0-22-10-22-22
-         c0-2 0-4 1-6
-         c-5-2-9-7-9-12Z"
-    />
+    <g fill="#0088ca">
+      <circle class="hero-node" cx="110" cy="180" r="6.5" fill-opacity="0.8" />
+      <circle class="hero-node hero-node-2" cx="168" cy="148" r="8.5" fill-opacity="0.95" />
+      <circle class="hero-node" cx="210" cy="118" r="6" fill-opacity="0.75" />
+      <circle class="hero-node hero-node-3" cx="236" cy="168" r="8" fill-opacity="0.9" />
+      <circle class="hero-node" cx="268" cy="140" r="6" fill-opacity="0.78" />
+      <circle class="hero-node hero-node-2" cx="186" cy="208" r="9.5" />
+      <circle class="hero-node" cx="140" cy="236" r="5.5" fill-opacity="0.72" />
+      <circle class="hero-node" cx="248" cy="246" r="6.5" fill-opacity="0.8" />
+      <circle class="hero-node hero-node-3" cx="304" cy="210" r="7.5" fill-opacity="0.88" />
+      <circle class="hero-node" cx="300" cy="132" r="5.5" fill-opacity="0.7" />
+      <circle class="hero-node" cx="340" cy="170" r="5.5" fill-opacity="0.7" />
+    </g>
   </g>
 </svg>
