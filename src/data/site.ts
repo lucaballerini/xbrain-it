@@ -1,6 +1,7 @@
 export const site = {
   name: 'XBRAIN srl',
   legalName: 'XBRAIN srl',
+  vatId: 'IT01574990436',
   tagline: 'Web, E-Commerce, Marketing & IT Heroes',
   url: 'https://www.xbrain.it',
   locale: 'it_IT',

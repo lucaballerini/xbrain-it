@@ -42,6 +42,7 @@ const year = new Date().getFullYear();
       <h2>Contattaci</h2>
       <ul>
         <li>{site.address.street}<br />{site.address.city} ({site.address.region})</li>
+        <li>P. IVA {site.vatId}</li>
         <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
         <li><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></li>
         <li><a href={`tel:${site.mobile}`}>{site.mobileDisplay}</a></li>
@@ -50,7 +51,7 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="container footer-bottom">
-    <span>© {year} {site.legalName}. Tutti i diritti riservati.</span>
+    <span>© {year} {site.legalName} — P. IVA {site.vatId}. Tutti i diritti riservati.</span>
     <span>
       <a href="/informativa-privacy/">Informativa privacy</a>
       ·

@@ -24,6 +24,8 @@ const orgSchema = {
   image: `${site.url}/images/logo.png`,
   email: site.email,
   telephone: [site.phoneDisplay, site.mobileDisplay],
+  vatID: site.vatId,
+  taxID: site.vatId,
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
